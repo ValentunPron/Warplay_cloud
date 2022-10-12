@@ -1,0 +1,18 @@
+//---Подключение шрифтов---//
+//--- &display=swap - нужно
+//---&subset=cyrillic-ext - якщо є кирилиця 
+@import url('https://fonts.googleapis.com/css?family=Roboto:200,300,regular,500,700&display=swap&subset=cyrillic-ext ');
+
+@font-face {
+    font-family: 'Aire Exterior';
+    src: url('../fonts/AireExterior.eot');
+    src: url('../fonts/AireExterior.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AireExterior.woff2') format('woff2'),
+        url('../fonts/AireExterior.woff') format('woff'),
+        url('../fonts/AireExterior.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
