@@ -13,8 +13,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	const swiper = new Swiper('.swiper', {
 		allowTouchMove: false,
+		effect: 'fade',
 		autoplay: {
-			delay: 10000,
+			delay: 15000,
 		},
 	});
 });

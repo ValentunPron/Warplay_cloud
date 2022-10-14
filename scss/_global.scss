@@ -35,10 +35,13 @@ body {
 }
 
 .subtitle {
+	display: inline;
 	position: relative;
+	padding-left: 4.5rem;
 	font-weight: 300;
 	font-size: 1rem;
 	line-height: 180%;
+	margin-bottom: 9px;
 
 	color: #57D6FF;
 	&::after {
@@ -47,7 +50,7 @@ body {
 		width: 50px;
 		height: 1px;
 		margin: auto 0;
-		left: -5.25rem;
+		left: 0;
 		bottom: 0; top: 0;
 		background-color: #57D6FF;
 	}
@@ -57,12 +60,50 @@ body {
 	font-weight: 400;
 	font-size: 39px;
 	line-height: 39px;
+	padding-top: 9px;
 }
 
 .link {
 	position: relative;
 	color: var(--white);
 	padding-bottom: 4px;
+
+	&::after {
+		display: block;
+		content: "";
+		position: absolute;
+		left: 50%; 
+		bottom: 0;
+		width: 0%;
+		height: 1px; 
+		background-color: var(--sky-blue); 
+		box-shadow: 1px 1px 10px var(--sky-blue), -1px -1px 10px var(--sky-blue);
+		transition: all 0.3s ease-out; 
+	}
+	&::before {
+		display: block;
+		content: "";
+		position: absolute;
+		right: 50%;
+		bottom: 0;
+		width: 0%;
+		height: 1px; 
+		background-color: var(--sky-blue); 
+		box-shadow: 1px 1px 10px var(--sky-blue), -1px -1px 10px var(--sky-blue);
+		transition: all 0.3s ease-out; 
+	}
+	&:hover:after,
+	&:focus:after {
+		width: 50%;
+	}
+	&:hover:before,
+	&:focus:before {
+		width: 50%;
+	}
+}
+
+.link-blue {
+	color: var(--sky-blue);
 
 	&::after {
 		display: block;
