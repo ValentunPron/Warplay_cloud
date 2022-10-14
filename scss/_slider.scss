@@ -1,5 +1,17 @@
 .slider {
+	position: relative;
 	font-family: 'Aire Exterior', 'Times', sans-serif;
+	&::before {
+		content: '';
+		position: absolute;
+		height: 130px;
+		width: 1px;
+		background-color: #FFF;
+		margin: 0 auto;
+		bottom: -65px; 
+		right: 0; left: 0;
+		z-index: 11;
+	}
 	&__body {
 		position: relative;
 		height: calc(650px + (777 - 650) * ((100vw - 320px) / (1200 - 320)) );
@@ -47,7 +59,7 @@
 
 
 	&__subtitle {
-		margin-top: 175px;
+		margin-top: 160px;
 		font-family: 'Roboto', 'Times', sans-serif;
 		font-weight: 500;
 		font-size: 1rem;
@@ -58,7 +70,7 @@
 	&__title {
 		font-size: 48px;
 		line-height: 1;
-		margin-bottom: 100px;
+		margin-bottom: calc(75px + (100 - 75) * ((100vw - 320px) / (1200 - 320)) );;
 	}
 
 	&__burger {
@@ -133,6 +145,15 @@
 
 @media (max-width: $breakpoint772) {
 	.slider {
+		&__body {
+			position: relative;
+			height: calc(650px + (777 - 650) * ((100vw - 320px) / (1200 - 320)) );
+			z-index: 5;
+			&::before {
+				content: '';
+				display: none;
+			}
+		}
 		.container-big {
 			max-width: 100%;
 			margin: 0 auto;
@@ -156,25 +177,7 @@
 			display: block;
 		}
 	}
-	.stalker {
-		background: radial-gradient(49.95% 96.01% at 50.05% 49.91%, rgba(82, 125, 139, 0) 0%, 
-					rgba(82, 125, 139, 0.25) 100%), 
-					linear-gradient(0deg, rgba(0, 0, 0, 0.2), 
-					rgba(0, 0, 0, 0.2)), url('../img/slider/01.jpg'), #FFF;
-		background-position: center;
-		background-repeat: no-repeat;
+	.stalker, .god_of_war, .kosmos, .space {
 		background-size: auto 100%;
-	}
-	
-	.god_of_war {
-		background-size: auto 100%;
-	}
-	
-	.kosmos {
-		background-size: auto 100%;	
-	}
-	
-	.space {
-		background-size: auto 100%;	
 	}
 }

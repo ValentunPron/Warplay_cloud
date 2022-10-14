@@ -5,6 +5,16 @@
 	left: 0;
 	background-color: var(--black);
 	z-index: 99;
+	&::after {
+		content: '';
+		position: absolute;
+		height: 1px;
+		width: 100%;
+		background: repeating-linear-gradient(-45deg, var(--gray), var(--gray) 5px, transparent 5px, transparent 10px);
+		bottom: 0;
+		left: 0;
+		z-index: 1;
+	}
 	&__body {
 		display: flex;
 		justify-content: space-between;
@@ -122,6 +132,9 @@
 		margin: 40px 0;
 		background-color: transparent;
 		position: absolute;
+		&::after {
+			display: none;
+		}
 		&__body {
 			display: block;
 			padding: 0px;
