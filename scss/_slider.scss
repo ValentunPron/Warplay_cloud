@@ -2,6 +2,7 @@
 	font-family: 'Aire Exterior', 'Times', sans-serif;
 	&__body {
 		position: relative;
+		height: calc(650px + (777 - 650) * ((100vw - 320px) / (1200 - 320)) );
 		z-index: 5;
 		&::before {
 			content: '';
@@ -17,9 +18,19 @@
 		}
 	}
 
+	&__slider {
+		height: 100%;
+		width: 100%;
+		border-bottom-right-radius: 14px;
+		border-bottom-left-radius: 14px;
+		z-index: 2;
+	}
 	&__item {
 		position: relative;
-		width: 100%;
+		border: 0.5px solid #57D6FF;
+		box-shadow: -33px 17px 29px rgba(0, 0, 0, 0.25);
+		border-bottom-right-radius: 15px;
+		border-bottom-left-radius: 15px;
 		height: 777px;
 		z-index: 10;
 	}
@@ -74,7 +85,7 @@
 		width: 52px;
 		height: 20px;
 		bottom: 25px; right: 15px;
-		z-index: 10;
+		z-index: 11;
 	}
 
 	&__burger::after {
@@ -101,15 +112,40 @@
 				rgba(82, 125, 139, 0.25) 100%), 
 				linear-gradient(0deg, rgba(0, 0, 0, 0.2), 
 				rgba(0, 0, 0, 0.2)), url('../img/slider/01.jpg'), #FFF;
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: auto 100%;
-	background-position: center;
-	border: 0.5px solid #57D6FF;
-	box-shadow: -33px 17px 29px rgba(0, 0, 0, 0.25);
-	border-bottom-right-radius: 15px;
-	border-bottom-left-radius: 15px;
 }
 
+.god_of_war {
+	background: radial-gradient(49.95% 96.01% at 50.05% 49.91%, rgba(82, 125, 139, 0) 0%, 
+				rgba(82, 125, 139, 0.25) 100%), 
+				linear-gradient(0deg, rgba(0, 0, 0, 0.2), 
+				rgba(0, 0, 0, 0.2)), url('../img/slider/02.jpg'), #FFF;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.kosmos {
+	background: radial-gradient(49.95% 96.01% at 50.05% 49.91%, rgba(82, 125, 139, 0) 0%, 
+				rgba(82, 125, 139, 0.25) 100%), 
+				linear-gradient(0deg, rgba(0, 0, 0, 0.2), 
+				rgba(0, 0, 0, 0.2)), url('../img/slider/03.jpg'), #FFF;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: auto 100%;	
+}
+
+.space {
+	background: radial-gradient(49.95% 96.01% at 50.05% 49.91%, rgba(82, 125, 139, 0) 0%, 
+				rgba(82, 125, 139, 0.25) 100%), 
+				linear-gradient(0deg, rgba(0, 0, 0, 0.2), 
+				rgba(0, 0, 0, 0.2)), url('../img/slider/04.jpg'), #FFF;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;	
+}
 
 @media (max-width: $breakpoint772) {
 	.slider {
@@ -135,5 +171,26 @@
 		&__burger {
 			display: block;
 		}
+	}
+	.stalker {
+		background: radial-gradient(49.95% 96.01% at 50.05% 49.91%, rgba(82, 125, 139, 0) 0%, 
+					rgba(82, 125, 139, 0.25) 100%), 
+					linear-gradient(0deg, rgba(0, 0, 0, 0.2), 
+					rgba(0, 0, 0, 0.2)), url('../img/slider/01.jpg'), #FFF;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: auto 100%;
+	}
+	
+	.god_of_war {
+		background-size: auto 100%;
+	}
+	
+	.kosmos {
+		background-size: auto 100%;	
+	}
+	
+	.space {
+		background-size: auto 100%;	
 	}
 }

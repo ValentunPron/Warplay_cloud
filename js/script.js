@@ -10,5 +10,11 @@ window.addEventListener('DOMContentLoaded', () => {
 		document.querySelector('.slider__burger').classList.remove('burger-active');
 		document.querySelector('body').classList.remove('lock');
 	})
-	console.log('dsd')
+
+	const swiper = new Swiper('.swiper', {
+		allowTouchMove: false,
+		autoplay: {
+			delay: 10000,
+		},
+	});
 });
