@@ -49,6 +49,9 @@
 	}
 	&__link svg:hover, &__link svg:focus {
 		fill: #43a7ff;
+		filter: drop-shadow(3px 3px 10px #43a7ff85);
+		-webkit-filter: drop-shadow(3px 3px 10px #43a7ff85);
+		-moz-filter: drop-shadow(3px 3px 10px #43a7ff85);
 	}
 
 }
@@ -81,9 +84,15 @@
 	}
 
 	&__link {
+		transition: all 0.4s ease-in;
 		img {
 			width: 30px;
 			height: 30px;
+		}
+		&:hover, &:focus {
+			filter: drop-shadow(0px 0px 10px #ffffffbf);
+			-webkit-filter: drop-shadow(0px 0px 10px #ffffffbf);
+			-moz-filter: drop-shadow(0px 0px 10px #ffffffbf);
 		}
 	}
 }
