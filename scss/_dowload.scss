@@ -72,6 +72,12 @@
 			flex: 1 1 50%;
 			text-align: center;
 		}
+		&__action-link {
+			img {
+				width: 80px;
+				height: 80px;
+			}
+		}
 	}
 }
 

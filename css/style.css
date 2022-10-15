@@ -1314,6 +1314,10 @@ body {
     flex: 1 1 50%;
     text-align: center;
   }
+  .dowload__action-link img {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 @media (max-width: 500px) {
