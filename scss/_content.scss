@@ -418,11 +418,13 @@
 		}
 	}
 	.subs {
+		padding-top: 90px;
 		padding-bottom: 0px;
 		&::before {
 			display: none;
 		}
 		&__list {
+			padding-top: 0px;
 			flex-direction: column;
 		}
 		&__item {
@@ -515,7 +517,7 @@
 			margin: 0 auto;
 		}
 		&__titles {
-			margin-bottom: 250px;
+			margin-bottom: 350px;
 		}
 		&__image {
 			display: block;
