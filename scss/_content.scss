@@ -135,9 +135,6 @@
 
 		color: #F1F1F1;
 	}
-
-	&__link {
-	}
 }
 //----------------------------------------------------------------------------
 .subs {
@@ -280,6 +277,7 @@
 		font-size: 1.312rem;
 		line-height: 1.5;
 		color: var(--gray);
+		margin-bottom: 60px;
 	}
 
 
@@ -472,9 +470,6 @@
 		&__desc-block {
 			text-align: center;
 		}
-		&__desc {
-			margin-bottom: 60px;
-		}
 		&__image {
 			display: none;
 		}
@@ -528,14 +523,6 @@
 			width: 520px;
 			height: 350.91px;
 			top: 25%;
-		}
-		&__desc-block {
-			text-align: center;
-			margin: 0 auto;
-			padding-top: 125px;
-		}
-		&__desc {
-			text-align: left;
 		}
 	}
 }
