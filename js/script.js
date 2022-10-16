@@ -62,7 +62,9 @@ window.addEventListener('DOMContentLoaded', () => {
 	if(document.querySelector('#main') && document.querySelector('.logo__link')) {
 		document.querySelector('#main').addEventListener('click', e => {
 			e.preventDefault();
-			window.scrollTo(0, 0);
+			document.querySelector('body').scrollIntoView({
+				behavior: 'smooth'
+			});
 			if(document.querySelector('.header__nav.burger-active')) {
 				document.querySelector('.header__nav').classList.remove('burger-active');
 				document.body.classList.remove('lock');
@@ -70,7 +72,9 @@ window.addEventListener('DOMContentLoaded', () => {
 		});
 		document.querySelector('#server').addEventListener('click', e => {
 			e.preventDefault();
-			document.querySelector('.how-works').scrollIntoView();;
+			document.querySelector('.how-works').scrollIntoView({
+				behavior: 'smooth'
+			});
 			if(document.querySelector('.header__nav.burger-active')) {
 				document.querySelector('.header__nav').classList.remove('burger-active');
 				document.body.classList.remove('lock');
@@ -78,7 +82,9 @@ window.addEventListener('DOMContentLoaded', () => {
 		});
 		document.querySelector('.logo__link').addEventListener('click', e => {
 			e.preventDefault();
-			window.scrollTo(0, 0);
+			document.querySelector('body').scrollIntoView({
+				behavior: 'smooth'
+			});
 			if(document.querySelector('.header__nav.burger-active')) {
 				document.querySelector('.header__nav').classList.remove('burger-active');
 				document.body.classList.remove('lock');
@@ -86,7 +92,9 @@ window.addEventListener('DOMContentLoaded', () => {
 		});
 		document.querySelector('#price').addEventListener('click', e => {
 			e.preventDefault();
-			document.querySelector('.subs').scrollIntoView();;
+			document.querySelector('.subs').scrollIntoView({
+				behavior: 'smooth'
+			});
 			if(document.querySelector('.header__nav.burger-active')) {
 				document.querySelector('.header__nav').classList.remove('burger-active');
 				document.body.classList.remove('lock');
