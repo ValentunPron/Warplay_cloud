@@ -1,0 +1,387 @@
+.dowload {
+	padding: 50px;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--black);
+	margin: auto;
+	&__body {
+		max-width: 590px;
+		margin: auto;
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		position: relative;
+		padding-bottom: 62.5px;
+	}
+
+	&__return {
+		left: -71px;
+		position: absolute;
+	}
+
+	&__title {
+		font-family: 'Aire Exterior', 'Times', sans-serif;
+		font-size: 3rem;
+		line-height: 1;
+	}
+
+	&__action-list {
+		display: flex;
+		margin-top: 62.5px;
+		justify-content: space-between;
+	}
+	&__action-link {
+		transition: all 0.4s ease-in;
+		&:hover, &:focus {
+			filter: drop-shadow(2px 2px 10px #015eb1b9);
+		}
+		img {
+			width: 100px;
+			height: 100px;
+		}
+	}
+}
+
+.contant {
+	padding: 0px;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+	background-color: var(--black);
+	&__return {
+		left: -71px;
+		position: absolute;
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		position: relative;
+		padding-bottom: 30px;
+	}
+
+	&__action-list {
+		display: flex;
+		margin-top: 30px;
+		justify-content: space-between;
+	}
+	&__action-link {
+		transition: all 0.4s ease-in;
+		img {
+			width: 50px;
+			height: 50px;
+		}
+	}
+}
+
+.login {
+	padding-top: 25px;
+	min-width: 300px;
+	max-width: 390px;
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	background-color: var(--black);
+	&__body {
+		margin: 0 auto;
+	}
+
+	&__top {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 32px;
+	}
+
+	&__title {
+		color: rgba(255, 255, 255, 0.5);
+		transition: all 0.2s ease-in;
+		&:hover, &:focus {
+			color: #fff;
+		}
+	}
+	&__title.login-active {
+		color: #fff;
+	}
+	&__return {
+		position: absolute;
+		left: -40px;
+		
+	}
+	
+	&__entery {
+		margin-left: 22px;
+	}
+	&__register {
+		margin-right: 0px;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		max-width: 100%;
+		row-gap: 15px;
+	}
+
+	&__active {
+		margin-top: 15px;
+		display: flex;
+		align-items: center;
+	}
+
+	&__checkbox-block {
+		display: grid;
+		align-items: center;
+		margin-top: 10px;
+		grid-template-columns: auto auto;
+	}
+	&__checkbox-block.reg {
+		align-items: flex-start;
+	}
+	&__checkbox-text {
+		margin-left: 24px;
+		display: block;
+		font-weight: 200;
+		font-size: 0.7rem;
+		line-height: 1.1;
+		color: #FFFFFF
+	}
+	&__button {
+		font-family: 'Aire Exterior', 'Times', sans-serif;
+		margin-left: 34px;
+		min-width: 0;
+		width: 100%;
+		font-weight: 400;
+		color: #000000;
+		position: relative;
+		z-index: 1;
+	}
+	&__button.reg {
+		max-width: 250px;
+		margin: 0 auto;
+	}
+
+	&__text {
+		position: relative;
+		text-align: center;
+		margin: 50px 15px 0 15px;
+		padding: 0 10px;
+
+		font-weight: 200;
+		font-size: 0.75rem;
+		line-height: 1.1px;
+		&::after {
+			position: absolute;
+			content: '';
+			top: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+			height: 1px;
+			width: 110px;
+			background-color: rgba(255, 255, 255, 0.5);
+		}
+		&::before {
+			position: absolute;
+			content: '';
+			top: 0;
+			bottom: 0;
+			right: 0;
+			margin: auto;
+			height: 1px;
+			width: 110px;
+			background-color: rgba(255, 255, 255, 0.5);
+		}
+	}
+
+	&__social-list {
+		display: flex;
+		flex-wrap:wrap;
+		justify-content: center;
+		text-align: center;
+		max-width: 200px;
+		row-gap: 15px;
+		margin: 20px auto;
+	}
+
+	&__social-item {
+		flex: 1 1 20%;
+	}
+
+	&__social-image {
+		width: 25px;
+		height: 25px;
+	}
+}
+
+.entery {
+	position: relative;
+	display: none;
+	z-index: -1;
+}
+
+.register {
+	position: relative;
+	display: none;
+	z-index: -1;
+}
+
+.entery.active, .register.active {
+	display: block;
+	z-index: 10;
+}
+#checkbox-entery, #checkbox-reg {
+	display: none;
+	transition: all 0.3 ease-in;
+}
+#checkbox-entery + .login__checkbox, #checkbox-reg + .login__checkbox {
+    display: flex;
+	cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+	border: 1px solid transparent;
+    align-items: center;
+	justify-content: center;
+}
+#checkbox-entery + .login__checkbox::before, #checkbox-reg + .login__checkbox::before{
+    content: '';
+    font-size: 20px;
+}
+#checkbox-entery:checked + .login__checkbox , #checkbox-reg:checked + .login__checkbox {
+    border: 1px solid var(--sky-blue);
+	filter: drop-shadow(0px 0px 2.5px #015fb175);
+}
+#checkbox-entery:checked + .login__checkbox::before, #checkbox-reg:checked + .login__checkbox::before{
+	content: '✔';
+    color: var(--sky-blue);
+}
+
+@media (max-width: $breakpoint772) {
+	.dowload {
+		padding: 75px 0px;
+		&__body {
+			max-width: auto;
+		}
+		&__return {
+			left: 0;
+			top: -55px;
+			margin: 0;
+		}
+		&__top {
+			text-align: center;
+			padding-bottom: 35px;
+		}
+		&__action-list {
+			margin-top: 35px;
+			flex-wrap: wrap;
+			justify-content: center;
+			row-gap: 30px;
+		}
+		&__action-item {
+			flex: 1 1 50%;
+			text-align: center;
+		}
+		&__action-link {
+			img {
+				width: 80px;
+				height: 80px;
+			}
+		}
+	}
+	.contant {
+		padding: 75px 0;
+		&__return {
+			position: absolute;
+			left: 0;
+			top: -55px;
+		}
+		&__top {
+			text-align: center;
+			padding-bottom: 15px;
+		}
+		&__action-list {
+			margin-top: 15px;
+		}
+		&__action-link {
+			img {
+				width: 40px;
+				height: 40px;
+			}
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.dowload {
+		padding: 100px 0 50px 0;
+		&__top {
+			text-align: left;
+		}
+		&__action-list {
+			margin-top: 10px;
+			row-gap: 30px;
+		}
+		&__action-item {
+			flex: 1 1 100%;
+		}
+	}
+	.login {
+		max-width: 324px;
+		padding-top: 100px;
+		&__body {
+			margin: 0 auto;
+		}
+		&__top {
+			flex-direction: column;
+			align-items: flex-start;
+			padding-left: 35px;
+		}
+		&__return {
+			top: -50px;
+			left: 0;
+		}
+		&__entery {
+			margin: 0;
+		}
+		&__name {
+			padding: 20px;
+			width: 100%;
+		}
+		&__active {
+			margin-top: 30px;
+			flex-direction: column-reverse;
+			justify-content: center;
+		}
+		&__button {
+			margin: 0px;
+			max-width: 250px;
+			margin-bottom: 35px;
+		}
+		&__checkbox {
+
+		}
+		&__checkbox-text {
+			display: block;
+			margin-left: 12px;
+			font-size: 0.7rem;
+		}
+
+		&__text {
+			&::before, &::after {
+				display: none;
+			}
+		}
+	}
+}
